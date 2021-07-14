@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_tester.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 18:35:26 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/13 22:21:40 by gandrade         ###   ########.fr       */
+/*   Created: 2021/07/12 19:00:00 by gandrade          #+#    #+#             */
+/*   Updated: 2021/07/13 20:58:51 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-# include <stdarg.h>
-# include <stdlib.h>
-# include <unistd.h>
+int	main(void) {
 
-int	ft_printf(const char *str, ...);
-
-#endif
+	char	character; // %c
+	char	string; // %s
+	void	*pointer; // %p
+	int 	signed_decimal; // %d
+	int 	unsigned_decimal; // %u
+	int 	integer; // %i
+	int 	hexadecimal; // %x
+	char	percent; // %%
+}
