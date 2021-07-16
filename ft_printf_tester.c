@@ -6,22 +6,40 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 19:00:00 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/13 20:58:51 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/16 14:51:49 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** It will manage the following conversions: cspdiuxX%
+** Manage any combination of the following flags: ’-0.’ and minimum field width with all conversions
+** Manage all the following flags: ’# +’ (yes, one of them is a space)
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <limits.h>
 
 int	main(void) {
 
-	char	character; // %c
-	char	string; // %s
-	void	*pointer; // %p
-	int 	signed_decimal; // %d
-	int 	unsigned_decimal; // %u
-	int 	integer; // %i
-	int 	hexadecimal; // %x
-	char	percent; // %%
+	void *pointer = NULL;
+
+	printf("----------Chars Section----------\n\n");
+	printf("printf pointer: %p\n", pointer);
+	printf("printf percent: %%\n");
+	printf("printf character: %c\n", 'C');
+	printf("printf string: %s\n", "C Sucks!");
+	printf("\n");
+
+	printf("----------Numbers Section----------\n\n");
+	printf("printf unsigned_decimal_max: %u\n", UINT_MAX);
+	printf("printf decimal_min: %d\n", INT_MIN);
+	printf("printf decimal_max: %d\n", INT_MAX);
+	printf("printf integer_min: %i\n", INT_MIN);
+	printf("printf integer_max: %i\n", INT_MAX);
+	printf("printf hexadecimal_min: %x\n", INT_MIN);
+	printf("printf hexadecimal_max: %x\n", INT_MAX);
+	printf("\n");
+
+	return 0;
 }

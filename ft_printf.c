@@ -6,11 +6,11 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/13 15:22:35 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/15 13:14:12 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_printf(const char *)
+int	ft_printf(const char *format, ...)
 {
 	
 }
