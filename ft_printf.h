@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/09 18:35:26 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/16 15:26:14 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/16 21:31:00 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct s_format
+typedef struct s_print
 {
 	
-}	t_format;
-
-typedef struct s_flags
-{
-	
-}	t_flags;
+}	t_print;
 
 int	ft_printf(const char *format, ...);
 
