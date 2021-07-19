@@ -6,27 +6,27 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/09 18:35:29 by gandrade          #+#    #+#              #
-#    Updated: 2021/07/19 12:48:00 by gandrade         ###   ########.fr        #
+#    Updated: 2021/07/19 12:50:51 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	libftprintf.a
+NAME = libftprintf.a
 
-CC	=	gcc
+CC = gcc
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
-LIB	=	ar -rcs
+LIB = ar -rcs
 
-RM	=	rm -rf
+RM = rm -rf
 
-SRCS	=	ft_printf.c \
+SRCS = ft_printf.c \
 
-OBJS	=	$(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
-all:	$(NAME)
+all: $(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME): $(OBJS)
 	@$(LIB) $(NAME) $(OBJS)
 	@echo "Compiled!"
 
@@ -34,9 +34,9 @@ clean:
 	@$(RM) $(OBJS)
 	@echo "Cleaned!"
 
-fclean:	clean
+fclean: clean
 	@$(RM) $(NAME)
 
-re:	fclean all
+re: fclean all
 
-.PHONY:	all clean fclean re
+.PHONY: all clean fclean re
