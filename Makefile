@@ -6,18 +6,14 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/09 18:35:29 by gandrade          #+#    #+#              #
-#    Updated: 2021/07/19 12:50:51 by gandrade         ###   ########.fr        #
+#    Updated: 2021/07/19 13:56:52 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-
 CC = gcc
-
 CFLAGS = -Wall -Wextra -Werror
-
 LIB = ar -rcs
-
 RM = rm -rf
 
 SRCS = ft_printf.c \
@@ -29,6 +25,9 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@$(LIB) $(NAME) $(OBJS)
 	@echo "Compiled!"
+
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@$(RM) $(OBJS)
