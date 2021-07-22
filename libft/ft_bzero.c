@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/22 00:36:40 by gandrade         ###   ########.fr       */
+/*   Created: 2021/05/18 18:34:39 by gandrade          #+#    #+#             */
+/*   Updated: 2021/05/27 22:19:39 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 #include "libft.h"
 
-int	ft_printf(const char *format, ...)
+void	ft_bzero(void *s, size_t n)
 {
-	va_list	args;
-	int		done;
-
-	done = //somefunction(format, args);
-	va_start(args, format);
-	va_end(args);
-	return (done);
+	ft_memset(s, 0, n);
 }

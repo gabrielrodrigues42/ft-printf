@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/22 00:36:40 by gandrade         ###   ########.fr       */
+/*   Created: 2021/06/07 15:38:32 by gandrade          #+#    #+#             */
+/*   Updated: 2021/06/10 14:38:00 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 #include "libft.h"
 
-int	ft_printf(const char *format, ...)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	va_list	args;
-	int		done;
-
-	done = //somefunction(format, args);
-	va_start(args, format);
-	va_end(args);
-	return (done);
+	del(lst->content);
+	free(lst);
 }

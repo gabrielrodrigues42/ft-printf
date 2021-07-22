@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/22 00:36:40 by gandrade         ###   ########.fr       */
+/*   Created: 2021/05/22 01:41:15 by gandrade          #+#    #+#             */
+/*   Updated: 2021/05/30 23:29:24 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 #include "libft.h"
 
-int	ft_printf(const char *format, ...)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	va_list	args;
-	int		done;
+	unsigned char	*str;
 
-	done = //somefunction(format, args);
-	va_start(args, format);
-	va_end(args);
-	return (done);
+	str = (unsigned char *)s;
+	while (n--)
+	{
+		if (*str == (unsigned char)c)
+			return (str);
+		str++;
+	}
+	return (NULL);
 }

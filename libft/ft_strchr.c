@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/22 00:36:40 by gandrade         ###   ########.fr       */
+/*   Created: 2021/05/25 22:18:35 by gandrade          #+#    #+#             */
+/*   Updated: 2021/06/10 17:36:49 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 #include "libft.h"
 
-int	ft_printf(const char *format, ...)
+char	*ft_strchr(const char *s, int c)
 {
-	va_list	args;
-	int		done;
-
-	done = //somefunction(format, args);
-	va_start(args, format);
-	va_end(args);
-	return (done);
+	while (*s)
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if ((char)c == 0)
+		return ((char *)s);
+	return (NULL);
 }

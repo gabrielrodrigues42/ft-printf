@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/22 00:36:40 by gandrade         ###   ########.fr       */
+/*   Created: 2021/06/02 14:45:47 by gandrade          #+#    #+#             */
+/*   Updated: 2021/06/11 23:35:55 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 #include "libft.h"
 
-int	ft_printf(const char *format, ...)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	va_list	args;
-	int		done;
+	size_t	end;
 
-	done = //somefunction(format, args);
-	va_start(args, format);
-	va_end(args);
-	return (done);
+	if (!s1 || !set)
+		return (NULL);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	end = ft_strlen(s1);
+	while (end && ft_strchr(set, s1[end]))
+		end--;
+	return (ft_substr(s1, 0, end + 1));
 }

@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/22 00:36:40 by gandrade         ###   ########.fr       */
+/*   Created: 2021/05/18 19:48:09 by gandrade          #+#    #+#             */
+/*   Updated: 2021/06/06 23:43:01 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 #include "libft.h"
 
-int	ft_printf(const char *format, ...)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	va_list	args;
-	int		done;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-	done = //somefunction(format, args);
-	va_start(args, format);
-	va_end(args);
-	return (done);
+	if (!dst && !src)
+		return (NULL);
+	str1 = (unsigned char *)dst;
+	str2 = (unsigned char *)src;
+	while (n--)
+	{
+		*str1 = *str2;
+		str1++;
+		str2++;
+	}
+	return (dst);
 }

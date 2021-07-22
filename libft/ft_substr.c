@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/22 00:36:40 by gandrade         ###   ########.fr       */
+/*   Created: 2021/05/28 13:55:33 by gandrade          #+#    #+#             */
+/*   Updated: 2021/06/03 19:04:20 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 #include "libft.h"
 
-int	ft_printf(const char *format, ...)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	va_list	args;
-	int		done;
+	char	*sub_str;
+	size_t	sub_len;
 
-	done = //somefunction(format, args);
-	va_start(args, format);
-	va_end(args);
-	return (done);
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) < start)
+		return (ft_strdup(""));
+	sub_len = ft_strlen(&s[start]);
+	if (sub_len < len)
+		len = sub_len;
+	sub_str = malloc((len + 1) * sizeof(char));
+	if (!sub_str)
+		return (NULL);
+	ft_strlcpy(sub_str, &s[start], len + 1);
+	return (sub_str);
 }
