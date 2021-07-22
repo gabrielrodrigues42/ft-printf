@@ -16,10 +16,8 @@
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
-	int		done;
 
 	va_start(args, format);
-	done = //somefunction(format, args);
 	va_end(args);
 	return (done);
 }
