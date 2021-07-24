@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/22 19:41:12 by gandrade         ###   ########.fr       */
+/*   Created: 2021/07/22 20:14:17 by gandrade          #+#    #+#             */
+/*   Updated: 2021/07/22 20:15:11 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 #include "libft.h"
 
-int	ft_printf(const char *format, ...)
+void	ft_strclear(char **str)
 {
-	va_list	args;
-	int		done;
-
-	va_start(args, format);
-	done = ft_format(format, args);
-	va_end(args);
-	return (done);
+	if (*str && str)
+	{
+		free(*str);
+		*str = NULL;
+	}
 }

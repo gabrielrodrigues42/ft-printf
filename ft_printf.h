@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/09 18:35:26 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/19 15:23:46 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/23 17:57:06 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct s_print
-{
-	char	*character;
-	char	*string;
-	void	*pointer;
-	int		integer;
-	int		decimal;
-	int		u_decimal;
-	int		hexadecimal;
-	int		c_hexadecimal;
-}	t_print;
-
 int	ft_printf(const char *format, ...);
+int	ft_format(const char *format, va_list args);
 
 #endif

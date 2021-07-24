@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_format.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/22 19:41:12 by gandrade         ###   ########.fr       */
+/*   Created: 2021/07/22 19:41:40 by gandrade          #+#    #+#             */
+/*   Updated: 2021/07/23 22:02:04 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int	ft_printf(const char *format, ...)
+int	ft_format(const char *format, va_list args)
 {
-	va_list	args;
-	int		done;
+	char	*tmp;
+	int		i;
 
-	va_start(args, format);
-	done = ft_format(format, args);
-	va_end(args);
-	return (done);
+	tmp = ft_strdup(format);
+	i = 0;
+	while (tmp[i] != '\0')
+	{
+		if (tmp[i] != '%')
+			write(1, &tmp[i++], 1);
+		if (tmp[i] == '%')
+		{
+			i++;
+			
+		}
+	}
+	return (0);
 }
