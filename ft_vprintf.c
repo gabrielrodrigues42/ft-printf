@@ -6,14 +6,14 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 19:41:40 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/25 21:26:59 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/26 00:16:00 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int	ft_placeholder(char *tmp, int i, va_list args);
+static int	ft_placeholder(char *tmp, int i, va_list args);
 
 int	ft_vprintf(const char *format, va_list args)
 {
@@ -35,7 +35,7 @@ int	ft_vprintf(const char *format, va_list args)
 	return (0);
 }
 
-int	ft_placeholder(char *tmp, int i, va_list args)
+static int	ft_placeholder(char *tmp, int i, va_list args)
 {
 	if (tmp[i + 1] == '%')
 		write(1, "%%", 1);
