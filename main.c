@@ -6,11 +6,12 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 00:25:38 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/26 15:15:44 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/26 15:29:04 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 int	main(void)
 {
