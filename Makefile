@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/09 18:35:29 by gandrade          #+#    #+#              #
-#    Updated: 2021/07/24 16:28:53 by gandrade         ###   ########.fr        #
+#    Updated: 2021/07/25 16:42:52 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,14 +16,14 @@ CFLAGS = -Wall -Wextra -Werror
 LIB = ar -rcs
 RM = rm -rf
 
-SRCS = ft_printf.c ft_format.c \
+SRCS = ft_printf.c ft_vprintf.c \
 
 OBJS = $(SRCS:.c=.o)
 
 all: libft $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I libft
+	$(CC) $(CFLAGS) -c $< -o $@ -I ./libft
 
 $(NAME): $(OBJS)
 	cp ./libft/libft.a $(NAME)
