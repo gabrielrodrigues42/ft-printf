@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 19:41:40 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/26 00:16:00 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/26 01:20:29 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,21 @@ int	ft_vprintf(const char *format, va_list args)
 			i += 2;
 		}
 	}
+	free(tmp);
 	return (0);
 }
 
 static int	ft_placeholder(char *tmp, int i, va_list args)
 {
+	t_types	type;
+
 	if (tmp[i + 1] == '%')
 		write(1, "%%", 1);
 	if (tmp[i + 1] == 'c')
+	{
+		type.character = va_arg(args, int);
 		write(1, "c", 1);
+	}
 	if (tmp[i + 1] == 's')
 		write(1, "s", 1);
 	if (tmp[i + 1] == 'p')
@@ -55,5 +61,5 @@ static int	ft_placeholder(char *tmp, int i, va_list args)
 		write(1, "x", 1);
 	if (tmp[i + 1] == 'X')
 		write(1, "X", 1);
-	return 0;
+	return (0);
 }

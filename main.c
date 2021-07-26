@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/26 00:25:32 by gandrade         ###   ########.fr       */
+/*   Created: 2021/07/26 00:25:38 by gandrade          #+#    #+#             */
+/*   Updated: 2021/07/26 00:32:56 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
-int	ft_printf(const char *format, ...)
+int	main(void)
 {
-	va_list	args;
-	int		done;
-
-	va_start(args, format);
-	done = ft_vprintf(format, args);
-	va_end(args);
-	return (done);
+	ft_printf("%%HELLO %cWORLD%%\n");
+	ft_printf("%%%c%s%p%i%d%u%x%X\n");
+	return (0);
 }
