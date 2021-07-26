@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/09 18:35:29 by gandrade          #+#    #+#              #
-#    Updated: 2021/07/26 13:43:08 by gandrade         ###   ########.fr        #
+#    Updated: 2021/07/26 14:43:52 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ LIB = ar -rcs
 RM = rm -rf
 
 SRCS = ft_printf.c ft_vprintf.c ft_placeholder.c ft_char.c ft_string.c \
+       ft_integer.c \
 
 OBJS = $(SRCS:.c=.o)
 

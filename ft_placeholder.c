@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 13:39:40 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/26 13:39:49 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/26 15:14:15 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,8 @@ int	ft_placeholder(char *tmp, int i, va_list args)
 		ft_string(args);
 	if (tmp[i + 1] == 'p')
 		write(1, "p", 1);
-	if (tmp[i + 1] == 'i')
-		write(1, "i", 1);
-	if (tmp[i + 1] == 'd')
-		write(1, "d", 1);
+	if (tmp[i + 1] == 'i' || tmp[i + 1] == 'd')
+		ft_integer(args);
 	if (tmp[i + 1] == 'u')
 		write(1, "u", 1);
 	if (tmp[i + 1] == 'x')

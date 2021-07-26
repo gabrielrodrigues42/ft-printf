@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/09 18:35:26 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/26 13:36:10 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/26 14:43:25 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int	ft_vprintf(const char *format, va_list args);
 int	ft_placeholder(char *tmp, int i, va_list args);
 int	ft_char(va_list args);
 int	ft_string(va_list args);
+int	ft_integer(va_list args);
 
 #endif
