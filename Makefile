@@ -6,7 +6,7 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/09 18:35:29 by gandrade          #+#    #+#              #
-#    Updated: 2021/07/25 16:42:52 by gandrade         ###   ########.fr        #
+#    Updated: 2021/07/26 13:43:08 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS = -Wall -Wextra -Werror
 LIB = ar -rcs
 RM = rm -rf
 
-SRCS = ft_printf.c ft_vprintf.c \
+SRCS = ft_printf.c ft_vprintf.c ft_placeholder.c ft_char.c ft_string.c \
 
 OBJS = $(SRCS:.c=.o)
 
