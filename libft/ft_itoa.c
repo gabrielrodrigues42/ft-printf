@@ -6,13 +6,13 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 22:25:16 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/26 14:54:39 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/26 22:58:07 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	void	ft_nbrstr(char *str, int n, size_t size)
+static	void	ft_nbrstr(char *str, int n, int size)
 {
 	str[size] = '\0';
 	if (n >= 0)
@@ -37,7 +37,7 @@ static	void	ft_nbrstr(char *str, int n, size_t size)
 char	*ft_itoa(int n)
 {
 	char	*res;
-	size_t	size;
+	int		size;
 	int		aux;
 
 	if (n >= 0)

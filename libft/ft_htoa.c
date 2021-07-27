@@ -6,13 +6,13 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 21:34:12 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/26 22:09:57 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/26 22:58:56 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	void	ft_hexstr(char *str, unsigned int n, size_t size, int x)
+static	void	ft_hexstr(char *str, unsigned int n, int size, int x)
 {
 	str[size] = '\0';
 	while (size--)
@@ -33,7 +33,7 @@ static	void	ft_hexstr(char *str, unsigned int n, size_t size, int x)
 char	*ft_htoa(unsigned int n, int x)
 {
 	char			*res;
-	size_t			size;
+	int				size;
 	unsigned int	aux;
 
 	size = 1;
