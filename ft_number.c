@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 14:42:52 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/26 15:32:50 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/26 22:31:33 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int	ft_number(va_list args)
 	while (res[i] != '\0')
 		write(1, &res[i++], 1);
 	ft_strclear(&res);
-	return (0);
+	return (i);
 }
