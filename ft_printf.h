@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/09 18:35:26 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/26 22:50:19 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/27 12:34:44 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,16 @@ typedef struct s_types
 	char	*string;
 	int		character;
 	int		number;
-	int		unumber;
 	int		hexadecimal;
 }	t_types;
 
 int	ft_printf(const char *format, ...);
 int	ft_format(const char *format, va_list args);
-int	ft_placeholder(char *tmp, int i, va_list args);
+int	ft_placeholder(char *format, int offset, va_list args);
 int	ft_char(va_list args);
 int	ft_string(va_list args);
 int	ft_number(va_list args);
 int	ft_unumber(va_list args);
-int	ft_hex(va_list args, int x);
+int	ft_hex(va_list args, int converter);
 
 #endif
