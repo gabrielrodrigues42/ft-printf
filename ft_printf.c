@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/26 13:29:37 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/26 22:50:26 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_printf(const char *format, ...)
 	int		done;
 
 	va_start(args, format);
-	done = ft_vprintf(format, args);
+	done = ft_format(format, args);
 	va_end(args);
 	return (done);
 }

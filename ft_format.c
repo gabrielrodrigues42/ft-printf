@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vprintf.c                                       :+:      :+:    :+:   */
+/*   ft_format.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 19:41:40 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/26 22:43:12 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/26 22:50:45 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int	ft_vprintf(const char *format, va_list args)
+int	ft_format(const char *format, va_list args)
 {
 	char	*tmp;
 	int		ret;
