@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/09 18:35:26 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/28 12:09:12 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/28 16:35:09 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_types
 	char	*string;
 	int		character;
 	int		number;
+	int		unumber;
 	int		hexadecimal;
 }	t_types;
 
