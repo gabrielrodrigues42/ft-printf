@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string.c                                        :+:      :+:    :+:   */
+/*   ft_char.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/26 13:19:30 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/26 22:31:23 by gandrade         ###   ########.fr       */
+/*   Created: 2021/07/26 13:19:32 by gandrade          #+#    #+#             */
+/*   Updated: 2021/07/28 08:59:14 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_char(va_list args)
+{
+	t_types	type;
+
+	type.character = va_arg(args, int);
+	write(1, &type.character, 1);
+	return (1);
+}
 
 int	ft_string(va_list args)
 {

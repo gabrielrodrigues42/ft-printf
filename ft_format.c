@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 19:41:40 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/28 01:46:49 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/28 09:07:22 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_format(const char *format, va_list args)
 			ret += ft_placeholder(tmp, i, args);
 			if (ret == 0)
 			{
-				write(1, "%", 1);
+				ret += write(1, "%", 1);
 				i++;
 				continue ;
 			}
