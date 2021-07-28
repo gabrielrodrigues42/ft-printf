@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 14:42:52 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/28 16:35:19 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/28 17:11:53 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	ft_pointer(va_list args)
 	char	*res;
 	int		i;
 
-	type.pointer = va_arg(args, size_t);
+	type.pointer = va_arg(args, uintptr_t);
 	if (!type.pointer)
 		return (write(1, "0x0", 3));
 	aux = ft_ptoa(type.pointer);
