@@ -1,43 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_format.c                                        :+:      :+:    :+:   */
+/*   main3.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/22 19:41:40 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/28 01:46:49 by gandrade         ###   ########.fr       */
+/*   Created: 2021/07/26 22:54:49 by gandrade          #+#    #+#             */
+/*   Updated: 2021/07/28 01:52:07 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
+#include <stdio.h>
+#include <limits.h>
 
-int	ft_format(const char *format, va_list args)
+int	main(void)
 {
-	char	*tmp;
-	int		ret;
-	int		i;
-
-	tmp = ft_strdup(format);
-	ret = 0;
-	i = 0;
-	while (tmp[i] != '\0')
-	{
-		if (tmp[i] != '%')
-			ret += write(1, &tmp[i++], 1);
-		else
-		{
-			ret += ft_placeholder(tmp, i, args);
-			if (ret == 0)
-			{
-				write(1, "%", 1);
-				i++;
-				continue ;
-			}
-			i += 2;
-		}
-	}
-	free(tmp);
-	return (ret);
+	ft_printf("%Hello\n");
+	ft_printf("%%Hello\n");
+	ft_printf("%aHello\n");
+	ft_printf("%cHello\n", 'c');
+	ft_printf("%sHello\n", "hello");
+	return (0);
 }
