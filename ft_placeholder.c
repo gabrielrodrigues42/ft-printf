@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 13:39:40 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/28 17:18:43 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/28 18:21:45 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,21 @@ int	ft_placeholder(char *format, int offset, va_list args)
 
 	if (format[offset + 1] == 'i' || format[offset + 1] == 'd')
 		ret = ft_number(args);
-	if (format[offset + 1] == 'u')
+	else if (format[offset + 1] == 'u')
 		ret = ft_unumber(args);
-	if (format[offset + 1] == 'x')
+	else if (format[offset + 1] == 'x')
 		ret = ft_hex(args, 'x');
-	if (format[offset + 1] == 'X')
+	else if (format[offset + 1] == 'X')
 		ret = ft_hex(args, 'X');
-	if (format[offset + 1] == 'c')
+	else if (format[offset + 1] == 'c')
 		ret = ft_char(args);
-	if (format[offset + 1] == 's')
+	else if (format[offset + 1] == 's')
 		ret = ft_string(args);
-	if (format[offset + 1] == 'p')
+	else if (format[offset + 1] == 'p')
 		ret = ft_pointer(args);
-	if (format[offset + 1] == '%')
+	else if (format[offset + 1] == '%')
 		ret = write(1, "%", 1);
+	else
+		return (-1);
 	return (ret);
 }
