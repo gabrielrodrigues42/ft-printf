@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_number.c                                        :+:      :+:    :+:   */
+/*   ft_numbers.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 14:42:52 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/28 08:59:40 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/28 12:17:54 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_unumber(va_list args)
 	int		i;
 
 	type.number = va_arg(args, int);
-	res = ft_itoa_unsigned(type.number);
+	res = ft_uitoa(type.number);
 	i = 0;
 	while (res[i] != '\0')
 		write(1, &res[i++], 1);
@@ -54,6 +54,26 @@ int	ft_hex(va_list args, int converter)
 	i = 0;
 	while (res[i] != '\0')
 		write(1, &res[i++], 1);
+	ft_strclear(&res);
+	return (i);
+}
+
+int	ft_pointer(va_list args)
+{
+	t_types	type;
+	char	*aux;
+	char	*res;
+	int		i;
+
+	type.pointer = va_arg(args, size_t);
+	if (!type.pointer)
+		return (write(1, "0x0", 3));
+	aux = ft_ptoa(type.pointer);
+	res = ft_strjoin("0x", aux);
+	i = 0;
+	while (res[i] != '\0')
+		write(1, &res[i++], 1);
+	ft_strclear(&aux);
 	ft_strclear(&res);
 	return (i);
 }
