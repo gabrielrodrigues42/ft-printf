@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/09 18:35:26 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/28 17:11:05 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/28 17:25:30 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,15 @@
 
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdint.h>
 
 typedef struct s_types
 {
-	uintptr_t	pointer;
-	char		*string;
-	int			character;
-	int			number;
-	int			unumber;
-	int			hexadecimal;
+	size_t	pointer;
+	char	*string;
+	int		character;
+	int		number;
+	int		unumber;
+	int		hexadecimal;
 }	t_types;
 
 int	ft_printf(const char *format, ...);
