@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 13:19:32 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/28 19:27:13 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/29 18:09:10 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_string(va_list args)
 
 	type.string = va_arg(args, char *);
 	i = 0;
-	if (type.string == NULL)
+	if (!type.string)
 		return (write(1, "(null)", 6));
 	while (type.string[i] != '\0')
 		write(1, &type.string[i++], 1);
