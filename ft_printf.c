@@ -6,15 +6,15 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/09 18:35:24 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/29 17:57:49 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/07/29 18:04:24 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int	ft_format(const char *format, va_list args);
-int	ft_placeholder(char *format, int offset, va_list args);
+static int	ft_format(const char *format, va_list args);
+static int	ft_placeholder(char *format, int offset, va_list args);
 
 int	ft_printf(const char *format, ...)
 {
@@ -27,7 +27,7 @@ int	ft_printf(const char *format, ...)
 	return (done);
 }
 
-int	ft_format(const char *format, va_list args)
+static int	ft_format(const char *format, va_list args)
 {
 	char	*tmp;
 	int		ret;
@@ -56,7 +56,7 @@ int	ft_format(const char *format, va_list args)
 	return (ret);
 }
 
-int	ft_placeholder(char *format, int offset, va_list args)
+static int	ft_placeholder(char *format, int offset, va_list args)
 {
 	int	ret;
 
