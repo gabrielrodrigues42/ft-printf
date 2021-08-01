@@ -6,39 +6,46 @@
 #    By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/09 18:35:29 by gandrade          #+#    #+#              #
-#    Updated: 2021/07/29 17:59:01 by gandrade         ###   ########.fr        #
+#    Updated: 2021/08/01 01:49:41 by gandrade         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
+
+SRCS = $(wildcard ./*.c)
+OBJS = $(SRCS:.c=.o)
+
+INCLUDES = -I libft/includes
+
 CC = clang
 CFLAGS = -Wall -Wextra -Werror
+
 LIB = ar -rcs
+
 RM = rm -rf
 
-SRCS = ft_printf.c ft_chars.c ft_numbers.c \
-
-OBJS = $(SRCS:.c=.o)
+%.o: %.c
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 all: libft $(NAME)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I ./libft
-
 $(NAME): $(OBJS)
-	cp ./libft/libft.a $(NAME)
-	$(LIB) $(NAME) $(OBJS)
+	@cp ./libft/libft.a $(NAME)
+	@$(LIB) $(NAME) $(OBJS)
+	@echo "Compiled!"
 
 clean:
-	$(MAKE) -C libft clean
-	$(RM) $(OBJS)
+	@$(MAKE) -C libft clean
+	@$(RM) $(OBJS)
+	@echo "Cleaned!"
 
 fclean: clean
-	$(MAKE) -C libft fclean
-	$(RM) $(NAME)
+	@$(MAKE) -C libft fclean
+	@$(RM) $(NAME)
+	@echo "Full Cleaned!"
 
 libft:
-	$(MAKE) -C libft
+	@$(MAKE) -C libft
 
 re: fclean all
 
