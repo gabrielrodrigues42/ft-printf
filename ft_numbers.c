@@ -6,7 +6,7 @@
 /*   By: gandrade <gandrade@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 14:42:52 by gandrade          #+#    #+#             */
-/*   Updated: 2021/07/29 17:32:00 by gandrade         ###   ########.fr       */
+/*   Updated: 2021/08/04 16:10:33 by gandrade         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_unumber(va_list args)
 	int		i;
 
 	type.unumber = va_arg(args, int);
-	res = ft_uitoa(type.unumber);
+	res = ft_utoa(type.unumber);
 	i = 0;
 	while (res[i] != '\0')
 		write(1, &res[i++], 1);
